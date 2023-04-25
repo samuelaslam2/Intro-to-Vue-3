@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const product = 'Socks'
-=======
 const app = Vue.createApp({
     data() {
         return {
@@ -31,4 +28,3 @@ const app = Vue.createApp({
         }
     }
 })
->>>>>>> L6-end
