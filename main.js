@@ -1,12 +1,22 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart: 0,
-            premium:true,
-            details: ['50% cotton', '30% wool', '20% polyester']
-            
+            cart: [],
+            premium: true
         }
     },
     methods: {
+        updateCartAddition(id) {
+            this.cart.push(id)
+        },
+        updateCartDeletion(id){
+
+            if (this.cart.indexOf(id) == -1) {
+                console.log("Item not in cart")
+            } else {
+                this.cart.splice(this.cart.indexOf(id),1)
+            }
+            
+        }
     }
 })
