@@ -45,8 +45,8 @@ app.component('product-display', {
         </button>
         <button
             class="button"
-            :class="{ disabledButton: emptyCart}"
-            :disabled="emptyCart"
+            :class="{ disabledButton: emptyCart || !inStock}"
+            :disabled="emptyCart || !inStock"
             @click="removeFromCart">
             Remove from Cart
         </button>
